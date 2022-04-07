@@ -77,8 +77,8 @@ namespace GeointellectTest.Controllers
             {
                 var property = new PropertyModel { Name = item.Key, Value = item.Value };
                 await _context.Property.AddAsync(property);
-                await _context.SaveChangesAsync();
             }
+            await _context.SaveChangesAsync();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
